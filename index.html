@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <title>AmoElite | Luxury Lifestyle</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body
+    class="bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-500"
+  >
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="fixed top-0 left-0 w-full z-50">
+      <div class="max-w-7xl mx-auto px-4 md:px-6 pt-4">
+        <div
+          class="glass rounded-full border border-white/30 dark:border-white/10 shadow-xl overflow-hidden"
+        >
+          <div class="h-20 px-6 flex items-center justify-between">
+            <!-- LOGO -->
+
+            <a href="#" class="flex items-center">
+              <img
+                src="images/logo.png"
+                alt="AmoElite Logo"
+                class="h-10 md:h-12 object-contain rounded-r-full"
+              />
+            </a>
+
+            <!-- DESKTOP MENU -->
+
+            <div
+              class="hidden lg:flex items-center gap-10 text-sm uppercase tracking-wider"
+            >
+              <a href="#" class="hover:text-neutral-500 transition"> Home </a>
+
+              <a href="#about" class="hover:text-neutral-500 transition">
+                About
+              </a>
+
+              <a href="#collections" class="hover:text-neutral-500 transition">
+                Collections
+              </a>
+
+              <a href="#products" class="hover:text-neutral-500 transition">
+                Products
+              </a>
+
+              <a href="#contact" class="hover:text-neutral-500 transition">
+                Contact
+              </a>
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="flex items-center gap-3">
+              <!-- THEME BUTTON -->
+
+              <button
+                id="themeBtn"
+                aria-label="Toggle Theme"
+                class="w-11 h-11 rounded-full border border-black/20 dark:border-white/20 flex items-center justify-center hover:scale-105 transition"
+              >
+                <!-- Moon -->
+
+                <svg
+                  id="moonIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.752 15.002A9.718 9.718 0 0112 21.75c-5.385 0-9.75-4.365-9.75-9.75A9.718 9.718 0 019.002 2.248 7.5 7.5 0 1021.752 15z"
+                  />
+                </svg>
+
+                <!-- Sun -->
+
+                <svg
+                  id="sunIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="hidden w-5 h-5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </button>
+
+              <!-- MOBILE BUTTON -->
+
+              <button
+                id="menuBtn"
+                class="lg:hidden w-11 h-11 rounded-full border border-black/20 dark:border-white/20 flex flex-col items-center justify-center gap-1.5"
+              >
+                <span
+                  class="menu-line line-one block w-5 h-px bg-current"
+                ></span>
+
+                <span
+                  class="menu-line line-two block w-5 h-px bg-current"
+                ></span>
+
+                <span
+                  class="menu-line line-three block w-5 h-px bg-current"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 z-40 bg-white dark:bg-neutral-950 translate-x-full transition-transform duration-500 flex items-center justify-center"
+    >
+      <div class="flex flex-col items-center gap-10 text-3xl font-semibold">
+        <a href="#" class="mobile-link"> Home </a>
+
+        <a href="#about" class="mobile-link"> About </a>
+
+        <a href="#collections" class="mobile-link"> Collections </a>
+
+        <a href="#products" class="mobile-link"> Products </a>
+
+        <a href="#contact" class="mobile-link"> Contact </a>
+      </div>
+    </div>
+
+    <!-- ================= HERO ================= -->
+
+   <section class="relative min-h-screen flex items-center overflow-hidden pt-28>
+
+
+    <!-- BACKGROUND SLIDES -->
+
+    <div
+        id="heroBg1"
+        class="
+            absolute
+            inset-0
+            bg-cover
+            bg-center
+            transition-opacity
+            duration-1000
+        "
+        style="background-image:url('images/hero.jpg');"
+    ></div>
+
+
+    <div
+        id="heroBg2"
+        class="
+            absolute
+            inset-0
+            bg-cover
+            bg-center
+            opacity-0
+            transition-opacity
+            duration-1000
+        "
+    ></div>
+
+
+
+    <!-- DARK OVERLAY -->
+
+    <div
+        class="
+            absolute
+            inset-0
+            bg-black/40
+            dark:bg-black/50
+        "
+    ></div>
+
+
+
+
+    <!-- YOUR ORIGINAL HERO CONTENT -->
+
+    <div
+        class="
+            relative
+            z-10
+            max-w-7xl
+            mx-auto
+            px-6
+            w-full
+        "
+    >
+
+
+        <div class="
+            grid
+            lg:grid-cols-2
+            gap-16
+            items-center
+        ">
+
+
+
+            <!-- LEFT TEXT -->
+
+            <div class="reveal">
+
+
+                <p class="
+                    uppercase
+                    tracking-[8px]
+                    text-sm
+                    text-white/70
+                ">
+
+                    Luxury Brand
+
+                </p>
+
+
+
+                <h1
+                    class="
+                    mt-6
+                    text-6xl
+                    md:text-7xl
+                    lg:text-8xl
+                    font-extrabold
+                    leading-[0.9]
+                    text-white
+                    "
+                >
+
+                    Elevate
+
+                    <br>
+
+                    Your
+
+                    <br>
+
+                    Lifestyle
+
+                </h1>
+
+
+
+                <p
+                    class="
+                    mt-8
+                    max-w-lg
+                    text-lg
+                    text-white/80
+                    "
+                >
+
+                    AmoElite creates premium experiences
+                    through elegant design, exceptional
+                    quality, and timeless style.
+
+                </p>
+
+
+
+                <div class="mt-10 flex flex-wrap gap-5">
+
+
+                    <a
+                        href="#collections"
+                        class="
+                        px-8
+                        py-4
+                        rounded-full
+                        bg-white
+                        text-black
+                        hover:scale-105
+                        transition
+                        "
+                    >
+
+                        Explore Collection
+
+                    </a>
+
+
+
+                    <a
+                        href="#about"
+                        class="
+                        px-8
+                        py-4
+                        rounded-full
+                        border
+                        border-white/40
+                        text-white
+                        hover:bg-white
+                        hover:text-black
+                        transition
+                        "
+                    >
+
+                        Discover More
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- RIGHT LOGO -->
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+    <!-- ABOUT AMOELITE -->
+
+    <section
+      id="about"
+      class="py-32 bg-neutral-50 dark:bg-neutral-900 transition-colors duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div class="reveal">
+            <p
+              class="uppercase tracking-[6px] text-sm text-neutral-500 dark:text-neutral-400"
+            >
+              About AmoElite
+            </p>
+
+            <h2 class="mt-6 text-5xl md:text-6xl font-bold leading-tight">
+              Where Elegance Meets Excellence
+            </h2>
+
+            <p
+              class="mt-8 text-lg leading-relaxed text-neutral-600 dark:text-neutral-400"
+            >
+              AmoElite represents modern luxury through carefully selected
+              designs, exceptional quality, and timeless aesthetics. Every
+              detail is created to deliver a premium experience that reflects
+              confidence and sophistication.
+            </p>
+
+            <a
+              href="#collections"
+              class="inline-flex mt-10 px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black hover:scale-105 transition"
+            >
+              Explore Our Vision
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6 reveal">
+            <div
+              class="h-72 rounded-3xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center p-8 text-center"
+            >
+              <div>
+                <h3 class="text-4xl font-bold">10+</h3>
+
+                <p class="mt-3 text-neutral-300 dark:text-neutral-600">
+                  Years Experience
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="h-72 rounded-3xl border border-black/10 dark:border-white/10 flex items-center justify-center p-8 text-center"
+            >
+              <div>
+                <h3 class="text-4xl font-bold">500+</h3>
+
+                <p class="mt-3 text-neutral-500">Premium Products</p>
+              </div>
+            </div>
+
+            <div
+              class="h-72 rounded-3xl border border-black/10 dark:border-white/10 flex items-center justify-center p-8 text-center"
+            >
+              <div>
+                <h3 class="text-4xl font-bold">50K+</h3>
+
+                <p class="mt-3 text-neutral-500">Happy Clients</p>
+              </div>
+            </div>
+
+            <div
+              class="h-72 rounded-3xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center p-8 text-center"
+            >
+              <div>
+                <h3 class="text-4xl font-bold">100%</h3>
+
+                <p class="mt-3 text-neutral-600 dark:text-neutral-400">
+                  Quality Focus
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS -->
+
+    <section id="collections" class="py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto reveal">
+          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
+            Collections
+          </p>
+
+          <h2 class="mt-5 text-5xl md:text-6xl font-bold">
+            Designed For Modern Living
+          </h2>
+
+          <p class="mt-6 text-neutral-600 dark:text-neutral-400 text-lg">
+            Discover carefully curated collections created with elegance and
+            purpose.
+          </p>
+        </div>
+
+        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- CARD 1 -->
+
+          <div
+            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+          >
+            <img
+              src="images/collection1.jpg"
+              alt="Collection"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-3xl font-semibold">Signature</h3>
+
+                <p class="mt-2 text-white/70">Classic luxury designs</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+
+          <div
+            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+          >
+            <img
+              src="images/collection2.jpg"
+              alt="Collection"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-3xl font-semibold">Premium</h3>
+
+                <p class="mt-2 text-white/70">Luxury essentials</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+
+          <div
+            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+          >
+            <img
+              src="images/collection3.jpg"
+              alt="Collection"
+              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-3xl font-semibold">Elite</h3>
+
+                <p class="mt-2 text-white/70">Exclusive experiences</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="py-32 bg-neutral-50 dark:bg-neutral-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-8">
+          <div
+            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
+          >
+            <h3 class="text-2xl font-semibold">Premium Quality</h3>
+
+            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+              Every product follows strict quality standards.
+            </p>
+          </div>
+
+          <div
+            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
+          >
+            <h3 class="text-2xl font-semibold">Timeless Design</h3>
+
+            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+              Minimal designs created to stay elegant forever.
+            </p>
+          </div>
+
+          <div
+            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
+          >
+            <h3 class="text-2xl font-semibold">Customer First</h3>
+
+            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
+              A luxury experience built around our customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PRODUCTS ================= -->
+
+    <section id="products" class="py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
+            Featured Products
+          </p>
+
+          <h2 class="mt-5 text-5xl md:text-6xl font-bold">
+            Curated Luxury Collection
+          </h2>
+
+          <p class="mt-6 text-lg text-neutral-600 dark:text-neutral-400">
+            Discover products designed with precision, elegance, and premium
+            quality.
+          </p>
+        </div>
+
+        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
+          >
+            <div class="h-72 overflow-hidden">
+              <img
+                src="images/product1.jpg"
+                alt="Product"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Luxury Collection</h3>
+
+              <p class="mt-2 text-neutral-500">Premium design</p>
+            </div>
+          </div>
+
+          <div
+            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
+          >
+            <div class="h-72 overflow-hidden">
+              <img
+                src="images/product2.jpg"
+                alt="Product"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Elite Series</h3>
+
+              <p class="mt-2 text-neutral-500">Modern elegance</p>
+            </div>
+          </div>
+
+          <div
+            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
+          >
+            <div class="h-72 overflow-hidden">
+              <img
+                src="images/product3.jpg"
+                alt="Product"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Signature</h3>
+
+              <p class="mt-2 text-neutral-500">Exclusive style</p>
+            </div>
+          </div>
+
+          <div
+            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
+          >
+            <div class="h-72 overflow-hidden">
+              <img
+                src="images/product4.jpg"
+                alt="Product"
+                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-xl font-semibold">Premium Line</h3>
+
+              <p class="mt-2 text-neutral-500">Luxury essentials</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LUXURY EXPERIENCE ================= -->
+
+    <section class="py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative rounded-[40px] overflow-hidden border border-white/20 dark:border-white/10 backdrop-blur-xl bg-white/20 dark:bg-white/5 p-10 md:p-20"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 via-transparent to-transparent"
+          ></div>
+
+          <div class="relative max-w-3xl">
+            <p class="uppercase tracking-[6px] text-sm text-neutral-500">
+              Luxury Experience
+            </p>
+
+            <h2 class="mt-6 text-5xl md:text-7xl font-bold">
+              More Than A Brand. A Lifestyle.
+            </h2>
+
+            <p class="mt-8 text-lg text-neutral-600 dark:text-neutral-400">
+              AmoElite delivers a premium experience where quality, design, and
+              sophistication come together.
+            </p>
+
+            <a
+              href="#contact"
+              class="inline-flex mt-10 px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black"
+            >
+              Experience Luxury
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="py-32 bg-neutral-50 dark:bg-neutral-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center">
+          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
+            Testimonials
+          </p>
+
+          <h2 class="mt-5 text-5xl font-bold">What Our Clients Say</h2>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-8">
+          <div class="glass-card rounded-3xl p-8">
+            <p class="text-lg">
+              "Exceptional quality and beautiful attention to detail."
+            </p>
+
+            <h3 class="mt-6 font-semibold">Ahmed</h3>
+          </div>
+
+          <div class="glass-card rounded-3xl p-8">
+            <p class="text-lg">
+              "A truly premium experience from start to finish."
+            </p>
+
+            <h3 class="mt-6 font-semibold">Sarah</h3>
+          </div>
+
+          <div class="glass-card rounded-3xl p-8">
+            <p class="text-lg">"Elegant designs that feel timeless."</p>
+
+            <h3 class="mt-6 font-semibold">Michael</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section id="contact" class="py-32">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="rounded-[40px] glass-card p-10 md:p-16 text-center">
+          <h2 class="text-4xl md:text-5xl font-bold">Stay Connected</h2>
+
+          <p class="mt-5 text-neutral-600 dark:text-neutral-400">
+            Subscribe for exclusive collections and luxury updates.
+          </p>
+
+          <div class="mt-8 flex flex-col md:flex-row gap-4">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="flex-1 px-6 py-4 rounded-full bg-white dark:bg-neutral-900 border border-black/10 dark:border-white/10 outline-none"
+            />
+
+            <button
+              class="px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="py-10 border-t border-black/10 dark:border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <img src="images/logo.png" alt="AmoElite" class="h-10 rounded-r-full" />
+
+        <p class="text-neutral-500 text-sm">
+          © 2026 AmoElite. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const html = document.documentElement;
+
+      const themeBtn = document.getElementById("themeBtn");
+
+      const moon = document.getElementById("moonIcon");
+
+      const sun = document.getElementById("sunIcon");
+
+      if (localStorage.theme === "dark") {
+        html.classList.add("dark");
+
+        moon.classList.add("hidden");
+
+        sun.classList.remove("hidden");
+      }
+
+      themeBtn.onclick = () => {
+        html.classList.toggle("dark");
+
+        if (html.classList.contains("dark")) {
+          localStorage.theme = "dark";
+
+          moon.classList.add("hidden");
+
+          sun.classList.remove("hidden");
+        } else {
+          localStorage.theme = "light";
+
+          moon.classList.remove("hidden");
+
+          sun.classList.add("hidden");
+        }
+      };
+
+      const menuBtn = document.getElementById("menuBtn");
+
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.onclick = () => {
+        menuBtn.classList.toggle("active");
+
+        mobileMenu.classList.toggle("translate-x-full");
+      };
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.onclick = () => {
+          mobileMenu.classList.add("translate-x-full");
+
+          menuBtn.classList.remove("active");
+        };
+      });
+
+
+window.addEventListener("load",()=>{
+
+
+    const loader =
+    document.getElementById("preloader");
+
+
+    setTimeout(()=>{
+
+
+        loader.classList.add(
+            "opacity-0"
+        );
+
+
+        setTimeout(()=>{
+
+
+            loader.style.display="none";
+
+
+        },1000);
+
+
+    },1200);
+
+
+});
+    </script>
+  </body>
+  <!-- ================= PRELOADER ================= -->
+
+  <div
+    id="preloader"
+    class="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-neutral-950 transition-opacity duration-1000"
+  >
+    <div class="text-center">
+      <img
+        src="images/logo.png"
+        alt="AmoElite"
+        class="w-40 md:w-52 opacity-0 animate-logo rounded-r-full"
+      />
+
+      <div
+        class="mt-8 h-px w-32 bg-neutral-300 dark:bg-neutral-700 overflow-hidden mx-auto"
+      >
+        <div class="h-full w-full bg-black dark:bg-white animate-loading"></div>
+      </div>
+    </div>
+  </div>
+</html>
