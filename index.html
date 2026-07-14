@@ -2,11 +2,14 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/output.css" />
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
 
-    <title>AmoElite | Luxury Lifestyle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AMO ELITE | Audit • Tax • Advisory</title>
+
+    <!-- Tailwind Output -->
+
+    <link rel="stylesheet" href="src/output.css" />
 
     <!-- Google Font -->
 
@@ -18,69 +21,71 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Custom CSS -->
-
-    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body
-    class="bg-white text-black dark:bg-neutral-950 dark:text-white transition-colors duration-500"
+    class="bg-white text-slate-800 dark:bg-slate-950 dark:text-white transition-colors duration-500"
   >
     <!-- ================= NAVBAR ================= -->
 
-    <nav class="fixed top-0 left-0 w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 pt-4">
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-4 md:px-6 pt-5">
         <div
-          class="glass rounded-full border border-white/30 dark:border-white/10 shadow-xl overflow-hidden"
+          class="glass rounded-full border border-white/50 dark:border-white/10 shadow-xl transition-all duration-500"
         >
-          <div class="h-20 px-6 flex items-center justify-between">
+          <div class="h-20 px-8 flex items-center justify-between">
             <!-- LOGO -->
 
-            <a href="#" class="flex items-center">
-              <img
-                src="images/logo.png"
-                alt="AmoElite Logo"
-                class="h-10 md:h-12 object-contain rounded-r-full"
-              />
+            <a href="#" class="flex items-center gap-4">
+              <img src="images/logo.png" alt="AMO ELITE" class="h-11" />
+
+              <div>
+                <h3 class="font-bold tracking-wide text-lg">AMO ELITE</h3>
+
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                  Audit • Tax • Advisory
+                </p>
+              </div>
             </a>
 
-            <!-- DESKTOP MENU -->
+            <!-- DESKTOP NAVIGATION -->
 
-            <div
-              class="hidden lg:flex items-center gap-10 text-sm uppercase tracking-wider"
-            >
-              <a href="#" class="hover:text-neutral-500 transition"> Home </a>
+            <div class="hidden lg:flex items-center gap-10 font-medium">
+              <a href="#" class="hover:text-blue-700 transition"> Home </a>
 
-              <a href="#about" class="hover:text-neutral-500 transition">
+              <a href="#about" class="hover:text-blue-700 transition">
                 About
               </a>
 
-              <a href="#collections" class="hover:text-neutral-500 transition">
-                Collections
+              <a href="#services" class="hover:text-blue-700 transition">
+                Services
               </a>
 
-              <a href="#products" class="hover:text-neutral-500 transition">
-                Products
+              <a href="#industries" class="hover:text-blue-700 transition">
+                Industries
               </a>
 
-              <a href="#contact" class="hover:text-neutral-500 transition">
+              <a href="#leadership" class="hover:text-blue-700 transition">
+                Leadership
+              </a>
+
+              <a href="#contact" class="hover:text-blue-700 transition">
                 Contact
               </a>
             </div>
 
-            <!-- ACTIONS -->
+            <!-- RIGHT SIDE -->
 
             <div class="flex items-center gap-3">
-              <!-- THEME BUTTON -->
+              <!-- THEME -->
 
               <button
                 id="themeBtn"
-                aria-label="Toggle Theme"
-                class="w-11 h-11 rounded-full border border-black/20 dark:border-white/20 flex items-center justify-center hover:scale-105 transition"
+                class="w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition"
               >
-                <!-- Moon -->
-
                 <svg
                   id="moonIcon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,8 +101,6 @@
                     d="M21.752 15.002A9.718 9.718 0 0112 21.75c-5.385 0-9.75-4.365-9.75-9.75A9.718 9.718 0 019.002 2.248 7.5 7.5 0 1021.752 15z"
                   />
                 </svg>
-
-                <!-- Sun -->
 
                 <svg
                   id="sunIcon"
@@ -116,23 +119,26 @@
                 </svg>
               </button>
 
-              <!-- MOBILE BUTTON -->
+              <!-- MOBILE -->
 
               <button
                 id="menuBtn"
-                class="lg:hidden w-11 h-11 rounded-full border border-black/20 dark:border-white/20 flex flex-col items-center justify-center gap-1.5"
+                class="lg:hidden w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center"
               >
-                <span
-                  class="menu-line line-one block w-5 h-px bg-current"
-                ></span>
-
-                <span
-                  class="menu-line line-two block w-5 h-px bg-current"
-                ></span>
-
-                <span
-                  class="menu-line line-three block w-5 h-px bg-current"
-                ></span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -140,624 +146,1185 @@
       </div>
     </nav>
 
-    <!-- ================= MOBILE MENU ================= -->
+    <!-- MOBILE MENU -->
 
     <div
       id="mobileMenu"
-      class="fixed inset-0 z-40 bg-white dark:bg-neutral-950 translate-x-full transition-transform duration-500 flex items-center justify-center"
+      class="fixed inset-0 translate-x-full transition-transform duration-500 bg-white dark:bg-slate-950 z-40 flex items-center justify-center"
     >
-      <div class="flex flex-col items-center gap-10 text-3xl font-semibold">
-        <a href="#" class="mobile-link"> Home </a>
+      <div class="flex flex-col gap-8 text-3xl font-semibold">
+        <a href="#"> Home </a>
 
-        <a href="#about" class="mobile-link"> About </a>
+        <a href="#about"> About </a>
 
-        <a href="#collections" class="mobile-link"> Collections </a>
+        <a href="#services"> Services </a>
 
-        <a href="#products" class="mobile-link"> Products </a>
+        <a href="#industries"> Industries </a>
 
-        <a href="#contact" class="mobile-link"> Contact </a>
+        <a href="#leadership"> Leadership </a>
+
+        <a href="#contact"> Contact </a>
       </div>
     </div>
 
     <!-- ================= HERO ================= -->
 
-   <section class="relative min-h-screen flex items-center overflow-hidden pt-28>
+    <section class="relative min-h-[90vh] overflow-hidden flex items-center">
+      <!-- Background Image 1 -->
 
-
-    <!-- BACKGROUND SLIDES -->
-
-    <div
+      <div
         id="heroBg1"
-        class="
-            absolute
-            inset-0
-            bg-cover
-            bg-center
-            transition-opacity
-            duration-1000
-        "
-        style="background-image:url('images/hero.jpg');"
-    ></div>
+        class="absolute inset-0 bg-cover bg-center transition-opacity duration-2000"
+        style="background-image: url(&quot;images/hero.jpg&quot;)"
+      ></div>
 
+      <!-- Background Image 2 -->
 
-    <div
+      <div
         id="heroBg2"
-        class="
-            absolute
-            inset-0
-            bg-cover
-            bg-center
-            opacity-0
-            transition-opacity
-            duration-1000
-        "
-    ></div>
+        class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-2000"
+      ></div>
 
+      <!-- Blue Overlay -->
 
+      <div
+        class="absolute inset-0 bg-liner-to-r from-slate-950/80 via-slate-900/65 to-blue-950/30"
+      ></div>
 
-    <!-- DARK OVERLAY -->
+      <!-- HERO CONTENT -->
 
-    <div
-        class="
-            absolute
-            inset-0
-            bg-black/40
-            dark:bg-black/50
-        "
-    ></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <!-- Part 1B Starts Here -->
 
+        <div class="grid lg:grid-cols-2 gap-16 items-center pt-32">
+          <!-- LEFT CONTENT -->
 
-
-
-    <!-- YOUR ORIGINAL HERO CONTENT -->
-
-    <div
-        class="
-            relative
-            z-10
-            max-w-7xl
-            mx-auto
-            px-6
-            w-full
-        "
-    >
-
-
-        <div class="
-            grid
-            lg:grid-cols-2
-            gap-16
-            items-center
-        ">
-
-
-
-            <!-- LEFT TEXT -->
-
-            <div class="reveal">
-
-
-                <p class="
-                    uppercase
-                    tracking-[8px]
-                    text-sm
-                    text-white/70
-                ">
-
-                    Luxury Brand
-
-                </p>
-
-
-
-                <h1
-                    class="
-                    mt-6
-                    text-6xl
-                    md:text-7xl
-                    lg:text-8xl
-                    font-extrabold
-                    leading-[0.9]
-                    text-white
-                    "
-                >
-
-                    Elevate
-
-                    <br>
-
-                    Your
-
-                    <br>
-
-                    Lifestyle
-
-                </h1>
-
-
-
-                <p
-                    class="
-                    mt-8
-                    max-w-lg
-                    text-lg
-                    text-white/80
-                    "
-                >
-
-                    AmoElite creates premium experiences
-                    through elegant design, exceptional
-                    quality, and timeless style.
-
-                </p>
-
-
-
-                <div class="mt-10 flex flex-wrap gap-5">
-
-
-                    <a
-                        href="#collections"
-                        class="
-                        px-8
-                        py-4
-                        rounded-full
-                        bg-white
-                        text-black
-                        hover:scale-105
-                        transition
-                        "
-                    >
-
-                        Explore Collection
-
-                    </a>
-
-
-
-                    <a
-                        href="#about"
-                        class="
-                        px-8
-                        py-4
-                        rounded-full
-                        border
-                        border-white/40
-                        text-white
-                        hover:bg-white
-                        hover:text-black
-                        transition
-                        "
-                    >
-
-                        Discover More
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-            <!-- RIGHT LOGO -->
-
-
-        </div>
-
-
-    </div>
-
-
-</section>
-    <!-- ABOUT AMOELITE -->
-
-    <section
-      id="about"
-      class="py-32 bg-neutral-50 dark:bg-neutral-900 transition-colors duration-500"
-    >
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-          <div class="reveal">
-            <p
-              class="uppercase tracking-[6px] text-sm text-neutral-500 dark:text-neutral-400"
+          <div class="max-w-2xl">
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-blue-600/15 border border-blue-300/20 px-5 py-2 text-sm text-blue-200"
             >
-              About AmoElite
+              Trusted Audit • Tax • Advisory Firm
+            </span>
+
+            <h1
+              class="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white"
+            >
+              Building Trust Through Professional Financial Excellence
+            </h1>
+
+            <p class="mt-8 text-lg leading-8 text-slate-300 max-w-xl">
+              AMO ELITE delivers independent Audit, Tax and Advisory services
+              with integrity, technical excellence and international
+              professional standards for businesses, NGOs, government
+              institutions and development partners.
             </p>
 
-            <h2 class="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-              Where Elegance Meets Excellence
+            <!-- BUTTONS -->
+
+            <div class="mt-10 flex flex-wrap gap-5">
+              <a
+                href="#services"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-medium transition"
+              >
+                Explore Services
+              </a>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-white/30 text-white hover:bg-white hover:text-slate-900 transition"
+              >
+                Contact Us
+              </a>
+            </div>
+
+            <!-- TRUST ITEMS -->
+
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <h3 class="text-3xl font-bold text-white">10+</h3>
+
+                <p class="mt-2 text-slate-400 text-sm">Years Experience</p>
+              </div>
+
+              <div>
+                <h3 class="text-3xl font-bold text-white">100+</h3>
+
+                <p class="mt-2 text-slate-400 text-sm">Projects</p>
+              </div>
+
+              <div>
+                <h3 class="text-3xl font-bold text-white">50+</h3>
+
+                <p class="mt-2 text-slate-400 text-sm">Organizations</p>
+              </div>
+
+              <div>
+                <h3 class="text-3xl font-bold text-white">24/7</h3>
+
+                <p class="mt-2 text-slate-400 text-sm">Client Support</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+
+          <div class="hidden lg:flex justify-end">
+            <div
+              class="w-107.5 rounded-[36px] bg-white/10 backdrop-blur-2xl border border-white/10 shadow-2xl p-10"
+            >
+              <div class="flex items-center gap-4">
+                <img src="images/logo.png" class="h-14" />
+
+                <div>
+                  <h3 class="text-xl font-bold text-white">AMO ELITE</h3>
+
+                  <p class="text-slate-300">Audit | Tax | Advisory</p>
+                </div>
+              </div>
+
+              <div class="mt-10 space-y-6">
+                <div
+                  class="flex justify-between items-center border-b border-white/10 pb-4"
+                >
+                  <span class="text-slate-400"> International Standards </span>
+
+                  <span class="font-semibold text-white"> IFRS / ISA </span>
+                </div>
+
+                <div
+                  class="flex justify-between items-center border-b border-white/10 pb-4"
+                >
+                  <span class="text-slate-400"> Industries </span>
+
+                  <span class="font-semibold text-white"> Multi-Sector </span>
+                </div>
+
+                <div
+                  class="flex justify-between items-center border-b border-white/10 pb-4"
+                >
+                  <span class="text-slate-400"> Expertise </span>
+
+                  <span class="font-semibold text-white">
+                    Audit & Advisory
+                  </span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                  <span class="text-slate-400"> Location </span>
+
+                  <span class="font-semibold text-white">
+                    Kabul, Afghanistan
+                  </span>
+                </div>
+              </div>
+
+              <div class="mt-10 rounded-2xl bg-blue-700 p-6">
+                <h3 class="text-white text-lg font-semibold">
+                  Delivering Confidence
+                </h3>
+
+                <p class="mt-3 text-blue-100 leading-7">
+                  Supporting organizations with reliable assurance, financial
+                  transparency and strategic advisory services.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div
+            class="w-7 h-12 rounded-full border border-white/40 flex justify-center pt-2"
+          >
+            <div class="w-1.5 h-3 rounded-full bg-white animate-bounce"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 1C (About + Mission + Vision) Starts Here -->
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- LEFT -->
+
+          <div>
+            <span
+              class="text-blue-700 font-semibold uppercase tracking-[4px] text-sm"
+            >
+              About AMO ELITE
+            </span>
+
+            <h2
+              class="mt-5 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white leading-tight"
+            >
+              Trusted Financial Professionals Delivering Value Through Expertise
             </h2>
 
             <p
-              class="mt-8 text-lg leading-relaxed text-neutral-600 dark:text-neutral-400"
+              class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400"
             >
-              AmoElite represents modern luxury through carefully selected
-              designs, exceptional quality, and timeless aesthetics. Every
-              detail is created to deliver a premium experience that reflects
-              confidence and sophistication.
+              AMO ELITE is an independent Audit, Tax and Advisory firm committed
+              to helping organizations achieve transparency, accountability and
+              sustainable growth through internationally recognized professional
+              standards.
             </p>
 
-            <a
-              href="#collections"
-              class="inline-flex mt-10 px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black hover:scale-105 transition"
+            <p
+              class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400"
             >
-              Explore Our Vision
-            </a>
+              We serve private companies, development organizations, government
+              institutions and NGOs with practical solutions that strengthen
+              financial reporting, governance and strategic decision making.
+            </p>
           </div>
 
-          <div class="grid grid-cols-2 gap-6 reveal">
-            <div
-              class="h-72 rounded-3xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center p-8 text-center"
-            >
-              <div>
-                <h3 class="text-4xl font-bold">10+</h3>
+          <!-- RIGHT -->
 
-                <p class="mt-3 text-neutral-300 dark:text-neutral-600">
-                  Years Experience
-                </p>
-              </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div
+              class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
+            >
+              <h3 class="text-5xl font-bold text-blue-700">10+</h3>
+
+              <h4 class="mt-5 text-xl font-semibold">Years</h4>
+
+              <p class="mt-3 text-slate-500">Professional experience.</p>
+            </div>
+
+            <div class="rounded-3xl p-8 bg-blue-700 text-white">
+              <h3 class="text-5xl font-bold">100+</h3>
+
+              <h4 class="mt-5 text-xl font-semibold">Engagements</h4>
+
+              <p class="mt-3 text-blue-100">Successfully delivered.</p>
+            </div>
+
+            <div class="rounded-3xl p-8 bg-slate-900 text-white">
+              <h3 class="text-5xl font-bold">50+</h3>
+
+              <h4 class="mt-5 text-xl font-semibold">Organizations</h4>
+
+              <p class="mt-3 text-slate-300">Across multiple industries.</p>
             </div>
 
             <div
-              class="h-72 rounded-3xl border border-black/10 dark:border-white/10 flex items-center justify-center p-8 text-center"
+              class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
             >
-              <div>
-                <h3 class="text-4xl font-bold">500+</h3>
+              <h3 class="text-5xl font-bold text-blue-700">24/7</h3>
 
-                <p class="mt-3 text-neutral-500">Premium Products</p>
-              </div>
-            </div>
+              <h4 class="mt-5 text-xl font-semibold">Support</h4>
 
-            <div
-              class="h-72 rounded-3xl border border-black/10 dark:border-white/10 flex items-center justify-center p-8 text-center"
-            >
-              <div>
-                <h3 class="text-4xl font-bold">50K+</h3>
-
-                <p class="mt-3 text-neutral-500">Happy Clients</p>
-              </div>
-            </div>
-
-            <div
-              class="h-72 rounded-3xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center p-8 text-center"
-            >
-              <div>
-                <h3 class="text-4xl font-bold">100%</h3>
-
-                <p class="mt-3 text-neutral-600 dark:text-neutral-400">
-                  Quality Focus
-                </p>
-              </div>
+              <p class="mt-3 text-slate-500">
+                Responsive client communication.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COLLECTIONS -->
+    <!-- ================= MISSION & VISION ================= -->
 
-    <section id="collections" class="py-32">
+    <section class="py-28 bg-slate-50 dark:bg-slate-900">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto reveal">
-          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
-            Collections
-          </p>
+        <div class="text-center max-w-3xl mx-auto">
+          <span
+            class="uppercase tracking-[4px] text-blue-700 font-semibold text-sm"
+          >
+            Who We Are
+          </span>
 
-          <h2 class="mt-5 text-5xl md:text-6xl font-bold">
-            Designed For Modern Living
+          <h2 class="mt-5 text-4xl md:text-5xl font-bold">
+            Driven By Integrity, Excellence & Professionalism
           </h2>
 
-          <p class="mt-6 text-neutral-600 dark:text-neutral-400 text-lg">
-            Discover carefully curated collections created with elegance and
-            purpose.
+          <p class="mt-8 text-lg text-slate-600 dark:text-slate-400 leading-8">
+            Our commitment is to deliver independent, objective and high-quality
+            professional services that help clients make confident business
+            decisions.
           </p>
         </div>
+
+        <div class="mt-16 grid md:grid-cols-2 gap-8">
+          <div
+            class="rounded-4xl bg-white dark:bg-slate-950 p-10 border border-slate-200 dark:border-slate-800 shadow-sm"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold"
+            >
+              M
+            </div>
+
+            <h3 class="mt-8 text-3xl font-bold">Our Mission</h3>
+
+            <p class="mt-6 leading-8 text-slate-600 dark:text-slate-400">
+              To provide reliable Audit, Tax and Advisory services that
+              strengthen financial accountability, improve governance and create
+              lasting value for every client.
+            </p>
+          </div>
+
+          <div
+            class="rounded-4xl bg-white dark:bg-slate-950 p-10 border border-slate-200 dark:border-slate-800 shadow-sm"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-2xl font-bold"
+            >
+              V
+            </div>
+
+            <h3 class="mt-8 text-3xl font-bold">Our Vision</h3>
+
+            <p class="mt-6 leading-8 text-slate-600 dark:text-slate-400">
+              To become one of the most trusted professional service firms,
+              recognized for technical excellence, innovation and unwavering
+              integrity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- SECTION HEADER -->
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Our Expertise
+          </span>
+
+          <h2
+            class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+          >
+            Professional Services Designed For Growth
+          </h2>
+
+          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            AMO ELITE provides comprehensive Audit, Tax and Advisory solutions
+            helping organizations improve transparency, efficiency and long-term
+            performance.
+          </p>
+        </div>
+
+        <!-- SERVICES GRID -->
+
+        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- SERVICE CARD 1 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              01
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Audit & Assurance</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Independent audit services that enhance credibility, accuracy and
+              financial reporting confidence.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 2 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              02
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Tax Advisory</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Strategic tax planning, compliance support and practical solutions
+              to manage tax obligations.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 3 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              03
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Financial Advisory</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Financial analysis, business improvement and decision-making
+              support for organizations.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 4 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              04
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Business Consulting</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Helping organizations improve strategy, operations and sustainable
+              growth.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 5 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              05
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Risk Advisory</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Risk assessment, internal controls and governance improvement
+              solutions.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 6 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              06
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Due Diligence</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Detailed financial reviews to support investment, partnership and
+              business decisions.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 7 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              07
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Corporate Restructuring</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Strategic restructuring support to improve organizational
+              efficiency and performance.
+            </p>
+          </div>
+
+          <!-- SERVICE CARD 8 -->
+
+          <div
+            class="group rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              08
+            </div>
+
+            <h3 class="mt-8 text-xl font-bold">Feasibility Studies</h3>
+
+            <p class="mt-4 leading-7 text-slate-600 dark:text-slate-400">
+              Market research and financial feasibility analysis for new
+              projects and investments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section id="why-us" class="py-28 bg-slate-50 dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADER -->
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Why AMO ELITE
+          </span>
+
+          <h2
+            class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+          >
+            A Trusted Partner For Organizations That Demand Excellence
+          </h2>
+
+          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            Our commitment to professionalism, integrity and technical
+            excellence allows us to deliver reliable solutions that create
+            measurable impact.
+          </p>
+        </div>
+
+        <!-- CARDS -->
 
         <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- CARD 1 -->
 
           <div
-            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
           >
-            <img
-              src="images/collection1.jpg"
-              alt="Collection"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
             >
-              <div class="text-white">
-                <h3 class="text-3xl font-semibold">Signature</h3>
-
-                <p class="mt-2 text-white/70">Classic luxury designs</p>
-              </div>
+              01
             </div>
+
+            <h3 class="mt-8 text-2xl font-bold">Experienced Professionals</h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              Our team combines technical knowledge, industry experience and
+              professional expertise to support complex business needs.
+            </p>
           </div>
 
           <!-- CARD 2 -->
 
           <div
-            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
           >
-            <img
-              src="images/collection2.jpg"
-              alt="Collection"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
             >
-              <div class="text-white">
-                <h3 class="text-3xl font-semibold">Premium</h3>
-
-                <p class="mt-2 text-white/70">Luxury essentials</p>
-              </div>
+              02
             </div>
+
+            <h3 class="mt-8 text-2xl font-bold">International Standards</h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              We apply globally recognized professional methodologies and
+              quality frameworks to ensure accuracy and reliability.
+            </p>
           </div>
 
           <!-- CARD 3 -->
 
           <div
-            class="group relative h-[450px] rounded-3xl overflow-hidden bg-neutral-200 dark:bg-neutral-800"
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
           >
-            <img
-              src="images/collection3.jpg"
-              alt="Collection"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-            />
-
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8"
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
             >
-              <div class="text-white">
-                <h3 class="text-3xl font-semibold">Elite</h3>
+              03
+            </div>
 
-                <p class="mt-2 text-white/70">Exclusive experiences</p>
+            <h3 class="mt-8 text-2xl font-bold">Independent & Trusted</h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              Our independence allows us to provide objective advice and
+              unbiased professional opinions that clients can rely on.
+            </p>
+          </div>
+
+          <!-- CARD 4 -->
+
+          <div
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              04
+            </div>
+
+            <h3 class="mt-8 text-2xl font-bold">Client Focused Approach</h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              Every engagement is designed around our client's objectives,
+              challenges and long-term goals.
+            </p>
+          </div>
+
+          <!-- CARD 5 -->
+
+          <div
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              05
+            </div>
+
+            <h3 class="mt-8 text-2xl font-bold">Quality Assurance</h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              Strong internal review processes ensure consistency, accuracy and
+              high-quality professional deliverables.
+            </p>
+          </div>
+
+          <!-- CARD 6 -->
+
+          <div
+            class="group rounded-3xl bg-white dark:bg-slate-950 p-8 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500 shadow-sm hover:shadow-xl"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-blue-700 text-white flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition"
+            >
+              06
+            </div>
+
+            <h3 class="mt-8 text-2xl font-bold">
+              Practical Business Solutions
+            </h3>
+
+            <p class="mt-5 leading-7 text-slate-600 dark:text-slate-400">
+              We combine technical expertise with practical understanding to
+              provide solutions that create real business value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= INDUSTRIES ================= -->
+
+    <section id="industries" class="py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADER -->
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Industries
+          </span>
+
+          <h2
+            class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+          >
+            Serving Organizations Across Multiple Sectors
+          </h2>
+
+          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            AMO ELITE works with organizations from different industries,
+            providing specialized Audit, Tax and Advisory solutions designed
+            around their needs.
+          </p>
+        </div>
+
+        <!-- INDUSTRY GRID -->
+
+        <div class="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- INDUSTRY 1 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              01
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">NGOs & Development</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Supporting non-profit organizations with financial accountability
+              and donor compliance requirements.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 2 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              02
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Government Sector</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Providing assurance, financial reviews and advisory support for
+              public institutions.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 3 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              03
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Banking & Finance</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Helping financial institutions strengthen reporting, controls and
+              risk management.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 4 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              04
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Construction</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Supporting projects with financial analysis, audits and
+              feasibility assessments.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 5 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              05
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Telecommunications</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Advisory solutions for technology-driven organizations and service
+              providers.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 6 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              06
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Manufacturing</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Improving financial performance, efficiency and operational
+              controls.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 7 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              07
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Education Sector</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Supporting educational institutions with financial management
+              solutions.
+            </p>
+          </div>
+
+          <!-- INDUSTRY 8 -->
+
+          <div
+            class="rounded-3xl p-8 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-700 transition group"
+          >
+            <div
+              class="text-blue-700 text-4xl font-bold group-hover:scale-110 transition"
+            >
+              08
+            </div>
+
+            <h3 class="mt-6 text-xl font-bold">Private Companies</h3>
+
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+              Helping businesses improve strategy, governance and financial
+              decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="py-20 bg-slate-900 dark:bg-black text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-10 text-center"
+      >
+        <div>
+          <h3 class="text-5xl font-bold text-blue-400">10+</h3>
+
+          <p class="mt-3 text-slate-300">Years Experience</p>
+        </div>
+
+        <div>
+          <h3 class="text-5xl font-bold text-blue-400">100+</h3>
+
+          <p class="mt-3 text-slate-300">Successful Engagements</p>
+        </div>
+
+        <div>
+          <h3 class="text-5xl font-bold text-blue-400">50+</h3>
+
+          <p class="mt-3 text-slate-300">Organizations Served</p>
+        </div>
+
+        <div>
+          <h3 class="text-5xl font-bold text-blue-400">8+</h3>
+
+          <p class="mt-3 text-slate-300">Industries Covered</p>
+        </div>
+      </div>
+    </section>
+    <!-- ================= LEADERSHIP TEAM ================= -->
+
+    <section id="leadership" class="py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- HEADER -->
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Leadership
+          </span>
+
+          <h2
+            class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+          >
+            Experienced Professionals Leading With Integrity
+          </h2>
+
+          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            Our leadership team brings together professional expertise, industry
+            experience and commitment to delivering high-quality advisory
+            services.
+          </p>
+        </div>
+
+        <!-- LEADERSHIP CARDS -->
+
+        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- PERSON 1 -->
+
+          <div
+            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
+          >
+            <div
+              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <img
+                src="images/team1.jpg"
+                alt="Ghulam Haider Rasooli"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-xl font-bold">Ghulam Haider Rasooli</h3>
+
+              <p class="mt-2 text-blue-700 font-medium">Managing Partner</p>
+
+              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
+                Providing strategic leadership and professional direction with
+                extensive experience in audit and advisory services.
+              </p>
+            </div>
+          </div>
+
+          <!-- PERSON 2 -->
+
+          <div
+            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
+          >
+            <div
+              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <img
+                src="images/team2.jpg"
+                alt="Sherafgan Ali Zeb"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-xl font-bold">Sherafgan Ali Zeb</h3>
+
+              <p class="mt-2 text-blue-700 font-medium">Partner</p>
+
+              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
+                Supporting clients through financial advisory, assurance and
+                business consulting solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- PERSON 3 -->
+
+          <div
+            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
+          >
+            <div
+              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <img
+                src="images/team3.jpg"
+                alt="Muhammad Luqman"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-xl font-bold">Muhammad Luqman</h3>
+
+              <p class="mt-2 text-blue-700 font-medium">Senior Advisor</p>
+
+              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
+                Delivering technical expertise and supporting complex
+                professional engagements.
+              </p>
+            </div>
+          </div>
+
+          <!-- PERSON 4 -->
+
+          <div
+            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
+          >
+            <div
+              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <img
+                src="images/team4.jpg"
+                alt="Moreed Ahmad Hamyar"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-xl font-bold">Moreed Ahmad Hamyar</h3>
+
+              <p class="mt-2 text-blue-700 font-medium">Advisory Consultant</p>
+
+              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
+                Focused on delivering effective solutions and supporting
+                organizational growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CLIENTS ================= -->
+
+    <section class="py-24 bg-slate-50 dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Our Clients
+          </span>
+
+          <h2 class="mt-6 text-4xl md:text-5xl font-bold">
+            Organizations That Trust Us
+          </h2>
+
+          <p class="mt-6 text-lg text-slate-600 dark:text-slate-400">
+            We have supported organizations across development, public and
+            private sectors with professional financial services.
+          </p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            HHOA
+          </div>
+
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            PACO
+          </div>
+
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            AADA
+          </div>
+
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            APSSO
+          </div>
+
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            AUWSSC
+          </div>
+
+          <div
+            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
+          >
+            BDN
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- LEFT SIDE -->
+
+          <div>
+            <span
+              class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+            >
+              Contact Us
+            </span>
+
+            <h2 class="mt-6 text-4xl md:text-5xl font-bold">
+              Let's Build A Better Future Together
+            </h2>
+
+            <p
+              class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400"
+            >
+              Whether you need Audit, Tax Advisory or Business Consulting
+              support, our professional team is ready to help your organization
+              achieve its goals.
+            </p>
+
+            <div class="mt-10 space-y-6">
+              <div>
+                <h4 class="font-bold text-lg">Office</h4>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                  Kabul, Afghanistan
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-lg">Email</h4>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                  info@amoelite.com
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-lg">Phone</h4>
+
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                  +93 XXX XXX XXX
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- WHY CHOOSE US -->
-
-    <section class="py-32 bg-neutral-50 dark:bg-neutral-900">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-3 gap-8">
-          <div
-            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
-          >
-            <h3 class="text-2xl font-semibold">Premium Quality</h3>
-
-            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
-              Every product follows strict quality standards.
-            </p>
-          </div>
+          <!-- FORM -->
 
           <div
-            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
+            class="rounded-4xl p-10 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
           >
-            <h3 class="text-2xl font-semibold">Timeless Design</h3>
-
-            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
-              Minimal designs created to stay elegant forever.
-            </p>
-          </div>
-
-          <div
-            class="p-10 rounded-3xl bg-white dark:bg-neutral-950 border border-black/10 dark:border-white/10 hover:-translate-y-2 transition"
-          >
-            <h3 class="text-2xl font-semibold">Customer First</h3>
-
-            <p class="mt-4 text-neutral-600 dark:text-neutral-400">
-              A luxury experience built around our customers.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= FEATURED PRODUCTS ================= -->
-
-    <section id="products" class="py-32">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto">
-          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
-            Featured Products
-          </p>
-
-          <h2 class="mt-5 text-5xl md:text-6xl font-bold">
-            Curated Luxury Collection
-          </h2>
-
-          <p class="mt-6 text-lg text-neutral-600 dark:text-neutral-400">
-            Discover products designed with precision, elegance, and premium
-            quality.
-          </p>
-        </div>
-
-        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div
-            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
-          >
-            <div class="h-72 overflow-hidden">
-              <img
-                src="images/product1.jpg"
-                alt="Product"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            <form class="space-y-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
               />
-            </div>
 
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">Luxury Collection</h3>
-
-              <p class="mt-2 text-neutral-500">Premium design</p>
-            </div>
-          </div>
-
-          <div
-            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
-          >
-            <div class="h-72 overflow-hidden">
-              <img
-                src="images/product2.jpg"
-                alt="Product"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
               />
-            </div>
 
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">Elite Series</h3>
-
-              <p class="mt-2 text-neutral-500">Modern elegance</p>
-            </div>
-          </div>
-
-          <div
-            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
-          >
-            <div class="h-72 overflow-hidden">
-              <img
-                src="images/product3.jpg"
-                alt="Product"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              <input
+                type="text"
+                placeholder="Subject"
+                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
               />
-            </div>
 
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">Signature</h3>
+              <textarea
+                rows="5"
+                placeholder="Your Message"
+                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
+              ></textarea>
 
-              <p class="mt-2 text-neutral-500">Exclusive style</p>
-            </div>
-          </div>
-
-          <div
-            class="group rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white dark:bg-neutral-900"
-          >
-            <div class="h-72 overflow-hidden">
-              <img
-                src="images/product4.jpg"
-                alt="Product"
-                class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
-              />
-            </div>
-
-            <div class="p-6">
-              <h3 class="text-xl font-semibold">Premium Line</h3>
-
-              <p class="mt-2 text-neutral-500">Luxury essentials</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= LUXURY EXPERIENCE ================= -->
-
-    <section class="py-32">
-      <div class="max-w-7xl mx-auto px-6">
-        <div
-          class="relative rounded-[40px] overflow-hidden border border-white/20 dark:border-white/10 backdrop-blur-xl bg-white/20 dark:bg-white/5 p-10 md:p-20"
-        >
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-yellow-500/20 via-transparent to-transparent"
-          ></div>
-
-          <div class="relative max-w-3xl">
-            <p class="uppercase tracking-[6px] text-sm text-neutral-500">
-              Luxury Experience
-            </p>
-
-            <h2 class="mt-6 text-5xl md:text-7xl font-bold">
-              More Than A Brand. A Lifestyle.
-            </h2>
-
-            <p class="mt-8 text-lg text-neutral-600 dark:text-neutral-400">
-              AmoElite delivers a premium experience where quality, design, and
-              sophistication come together.
-            </p>
-
-            <a
-              href="#contact"
-              class="inline-flex mt-10 px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black"
-            >
-              Experience Luxury
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= TESTIMONIALS ================= -->
-
-    <section class="py-32 bg-neutral-50 dark:bg-neutral-900">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center">
-          <p class="uppercase tracking-[6px] text-sm text-neutral-500">
-            Testimonials
-          </p>
-
-          <h2 class="mt-5 text-5xl font-bold">What Our Clients Say</h2>
-        </div>
-
-        <div class="mt-16 grid md:grid-cols-3 gap-8">
-          <div class="glass-card rounded-3xl p-8">
-            <p class="text-lg">
-              "Exceptional quality and beautiful attention to detail."
-            </p>
-
-            <h3 class="mt-6 font-semibold">Ahmed</h3>
-          </div>
-
-          <div class="glass-card rounded-3xl p-8">
-            <p class="text-lg">
-              "A truly premium experience from start to finish."
-            </p>
-
-            <h3 class="mt-6 font-semibold">Sarah</h3>
-          </div>
-
-          <div class="glass-card rounded-3xl p-8">
-            <p class="text-lg">"Elegant designs that feel timeless."</p>
-
-            <h3 class="mt-6 font-semibold">Michael</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= NEWSLETTER ================= -->
-
-    <section id="contact" class="py-32">
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="rounded-[40px] glass-card p-10 md:p-16 text-center">
-          <h2 class="text-4xl md:text-5xl font-bold">Stay Connected</h2>
-
-          <p class="mt-5 text-neutral-600 dark:text-neutral-400">
-            Subscribe for exclusive collections and luxury updates.
-          </p>
-
-          <div class="mt-8 flex flex-col md:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Your email"
-              class="flex-1 px-6 py-4 rounded-full bg-white dark:bg-neutral-900 border border-black/10 dark:border-white/10 outline-none"
-            />
-
-            <button
-              class="px-8 py-4 rounded-full bg-black text-white dark:bg-white dark:text-black"
-            >
-              Subscribe
-            </button>
+              <button
+                class="w-full py-4 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -765,119 +1332,229 @@
 
     <!-- ================= FOOTER ================= -->
 
-    <footer class="py-10 border-t border-black/10 dark:border-white/10">
-      <div
-        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6"
-      >
-        <img src="images/logo.png" alt="AmoElite" class="h-10 rounded-r-full" />
+    <footer class="bg-slate-950 text-white py-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+        <div>
+          <img src="images/logo.png" class="h-12 brightness-0 invert" />
 
-        <p class="text-neutral-500 text-sm">
-          © 2026 AmoElite. All rights reserved.
-        </p>
+          <p class="mt-6 text-slate-400 leading-7">
+            AMO ELITE Audit • Tax • Advisory Professional solutions for
+            sustainable growth.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg">Company</h3>
+
+          <div class="mt-6 space-y-3 text-slate-400">
+            <a href="#about"> About </a>
+
+            <br />
+
+            <a href="#services"> Services </a>
+
+            <br />
+
+            <a href="#leadership"> Leadership </a>
+
+            <br />
+
+            <a href="#contact"> Contact </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg">Services</h3>
+
+          <div class="mt-6 space-y-3 text-slate-400">
+            <p>Audit & Assurance</p>
+
+            <p>Tax Advisory</p>
+
+            <p>Financial Advisory</p>
+
+            <p>Business Consulting</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg">Follow Us</h3>
+
+          <div class="mt-6 flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+            >
+              f
+            </a>
+
+            <a
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+            >
+              in
+            </a>
+
+            <a
+              class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center"
+            >
+              X
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 pt-8 border-t border-white/10 text-center text-slate-500"
+      >
+        © 2026 AMO ELITE. All Rights Reserved.
       </div>
     </footer>
 
+    <!-- ================= JAVASCRIPT ================= -->
+
     <script>
-      const html = document.documentElement;
+      // DARK MODE
 
       const themeBtn = document.getElementById("themeBtn");
 
-      const moon = document.getElementById("moonIcon");
-
-      const sun = document.getElementById("sunIcon");
-
-      if (localStorage.theme === "dark") {
-        html.classList.add("dark");
-
-        moon.classList.add("hidden");
-
-        sun.classList.remove("hidden");
-      }
-
       themeBtn.onclick = () => {
-        html.classList.toggle("dark");
-
-        if (html.classList.contains("dark")) {
-          localStorage.theme = "dark";
-
-          moon.classList.add("hidden");
-
-          sun.classList.remove("hidden");
-        } else {
-          localStorage.theme = "light";
-
-          moon.classList.remove("hidden");
-
-          sun.classList.add("hidden");
-        }
+        document.documentElement.classList.toggle("dark");
       };
+
+      // MOBILE MENU
 
       const menuBtn = document.getElementById("menuBtn");
 
       const mobileMenu = document.getElementById("mobileMenu");
 
       menuBtn.onclick = () => {
-        menuBtn.classList.toggle("active");
-
         mobileMenu.classList.toggle("translate-x-full");
       };
 
-      document.querySelectorAll(".mobile-link").forEach((link) => {
-        link.onclick = () => {
-          mobileMenu.classList.add("translate-x-full");
+      // NAVBAR SCROLL EFFECT
 
-          menuBtn.classList.remove("active");
-        };
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("backdrop-blur-xl");
+        } else {
+          navbar.classList.remove("backdrop-blur-xl");
+        }
       });
 
+      // HERO SLIDESHOW
 
-window.addEventListener("load",()=>{
+      const images = [
+        "images/hero.jpg",
+
+        "images/hero2.jpg",
+
+        "images/hero3.jpg",
+      ];
+
+      let index = 0;
+
+      const bg1 = document.getElementById("heroBg1");
+
+      const bg2 = document.getElementById("heroBg2");
+
+      setInterval(() => {
+        index = (index + 1) % images.length;
+
+        bg2.style.backgroundImage = `url('${images[index]}')`;
+
+        bg2.classList.remove("opacity-0");
+
+        bg1.classList.add("opacity-0");
+
+        setTimeout(() => {
+          bg1.style.backgroundImage = `url('${images[index]}')`;
+
+          bg1.classList.remove("opacity-0");
+
+          bg2.classList.add("opacity-0");
+        }, 2000);
+      }, 6000);
 
 
-    const loader =
-    document.getElementById("preloader");
+
+window.addEventListener(
+"load",
+()=>{
 
 
-    setTimeout(()=>{
+const loader =
+document.getElementById("preloader");
 
 
-        loader.classList.add(
-            "opacity-0"
-        );
+
+setTimeout(()=>{
 
 
-        setTimeout(()=>{
+loader.classList.add(
+"opacity-0"
+);
 
 
-            loader.style.display="none";
+
+setTimeout(()=>{
 
 
-        },1000);
+loader.style.display="none";
 
 
-    },1200);
+},1000);
 
 
-});
+
+},500);
+
+
+
+}
+
+);
+
+
     </script>
   </body>
   <!-- ================= PRELOADER ================= -->
 
   <div
     id="preloader"
-    class="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-neutral-950 transition-opacity duration-1000"
+    class="fixed inset-0 z-9999 flex items-center justify-center bg-white dark:bg-slate-950 transition-opacity duration-1000"
   >
-    <div class="text-center">
+    <div class="flex flex-col items-center">
+      <!-- LOGO -->
+
       <img
         src="images/logo.png"
-        alt="AmoElite"
-        class="w-40 md:w-52 opacity-0 animate-logo rounded-r-full"
+        alt="AMO ELITE"
+        class="w-44 md:w-56 object-contain dark:brightness-0 dark:invert animate-pulse"
       />
 
+      <!-- COMPANY NAME -->
+
+      <div class="mt-8 text-center">
+        <h2
+          class="text-2xl font-bold tracking-[8px] text-slate-900 dark:text-white"
+        >
+          AMO ELITE
+        </h2>
+
+        <p class="mt-3 text-sm tracking-[4px] uppercase text-blue-700">
+          Audit • Tax • Advisory
+        </p>
+      </div>
+
+      <!-- LOADING BAR -->
+
       <div
-        class="mt-8 h-px w-32 bg-neutral-300 dark:bg-neutral-700 overflow-hidden mx-auto"
+        class="mt-10 w-52 h-0.75 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
       >
-        <div class="h-full w-full bg-black dark:bg-white animate-loading"></div>
+        <div
+          class="h-full w-1/2 bg-blue-700 rounded-full animate-loading"
+        ></div>
       </div>
     </div>
   </div>
