@@ -5,7 +5,27 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta
+      name="description"
+      content="AMO ELITE provides professional audit, tax, and advisory services with integrity, technical excellence, and international standards."
+    />
+
+    <meta
+      name="keywords"
+      content="AMO ELITE, Audit, Tax Advisory, Afghanistan, Consulting"
+    />
+
     <title>AMO ELITE | Audit • Tax • Advisory</title>
+
+    <!-- Favicon -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="images/favicon.png"
+    />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
 
     <!-- Tailwind Output -->
 
@@ -36,11 +56,15 @@
         <div
           class="glass rounded-full border border-white/50 dark:border-white/10 shadow-xl transition-all duration-500"
         >
-          <div class="h-20 px-8 flex items-center justify-between">
+          <div class="h-14 px-8 flex items-center justify-between">
             <!-- LOGO -->
 
             <a href="#" class="flex items-center gap-4">
-              <img src="images/logo.png" alt="AMO ELITE" class="h-11" />
+              <img
+                src="images/logo.png"
+                alt="AMO ELITE"
+                class="h-11 bg-white/50 rounded-full"
+              />
 
               <div>
                 <h3 class="font-bold tracking-wide text-lg">AMO ELITE</h3>
@@ -66,10 +90,6 @@
 
               <a href="#industries" class="hover:text-blue-700 transition">
                 Industries
-              </a>
-
-              <a href="#leadership" class="hover:text-blue-700 transition">
-                Leadership
               </a>
 
               <a href="#contact" class="hover:text-blue-700 transition">
@@ -123,22 +143,17 @@
 
               <button
                 id="menuBtn"
-                class="lg:hidden w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center"
+                class="lg:hidden w-11 h-11 rounded-full border border-slate-200 dark:border-slate-700 flex flex-col items-center justify-center gap-1.5 transition"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                </svg>
+                <span
+                  class="menuLine w-6 h-0.5 bg-current transition-all duration-300"
+                ></span>
+                <span
+                  class="menuLine w-6 h-0.5 bg-current transition-all duration-300"
+                ></span>
+                <span
+                  class="menuLine w-6 h-0.5 bg-current transition-all duration-300"
+                ></span>
               </button>
             </div>
           </div>
@@ -153,38 +168,27 @@
       class="fixed inset-0 translate-x-full transition-transform duration-500 bg-white dark:bg-slate-950 z-40 flex items-center justify-center"
     >
       <div class="flex flex-col gap-8 text-3xl font-semibold">
-        <a href="#"> Home </a>
+        <a href="#" class="mobileLink"> Home </a>
 
-        <a href="#about"> About </a>
+        <a href="#about" class="mobileLink"> About </a>
 
-        <a href="#services"> Services </a>
+        <a href="#services" class="mobileLink"> Services </a>
 
-        <a href="#industries"> Industries </a>
+        <a href="#industries" class="mobileLink"> Industries </a>
 
-        <a href="#leadership"> Leadership </a>
-
-        <a href="#contact"> Contact </a>
+        <a href="#contact" class="mobileLink"> Contact </a>
       </div>
     </div>
 
     <!-- ================= HERO ================= -->
 
-    <section class="relative min-h-[90vh] overflow-hidden flex items-center">
+    <section class="relative min-h-screen overflow-hidden flex items-center">
       <!-- Background Image 1 -->
 
       <div
-        id="heroBg1"
-        class="absolute inset-0 bg-cover bg-center transition-opacity duration-2000"
-        style="background-image: url(&quot;images/hero.jpg&quot;)"
+        class="absolute inset-0 opacity-90 object-cover"
+        style="background-image: url(&quot;images/background1.jpg&quot;)"
       ></div>
-
-      <!-- Background Image 2 -->
-
-      <div
-        id="heroBg2"
-        class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-2000"
-      ></div>
-
       <!-- Blue Overlay -->
 
       <div
@@ -194,9 +198,7 @@
       <!-- HERO CONTENT -->
 
       <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <!-- Part 1B Starts Here -->
-
-        <div class="grid lg:grid-cols-2 gap-16 items-center pt-32">
+        <div class="grid lg:grid-cols-2 gap-16 items-center pt-24">
           <!-- LEFT CONTENT -->
 
           <div class="max-w-2xl">
@@ -207,7 +209,7 @@
             </span>
 
             <h1
-              class="mt-8 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white"
+              class="mt-8 text-5xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white"
             >
               Building Trust Through Professional Financial Excellence
             </h1>
@@ -273,7 +275,10 @@
               class="w-107.5 rounded-[36px] bg-white/10 backdrop-blur-2xl border border-white/10 shadow-2xl p-10"
             >
               <div class="flex items-center gap-4">
-                <img src="images/logo.png" class="h-14" />
+                <img
+                  src="images/logo.png"
+                  class="h-14 bg-white/40 rounded-full"
+                />
 
                 <div>
                   <h3 class="text-xl font-bold text-white">AMO ELITE</h3>
@@ -332,7 +337,7 @@
           </div>
         </div>
 
-        <!-- SCROLL INDICATOR -->
+        <!-- SCROLL INDICATOR
 
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
           <div
@@ -340,11 +345,10 @@
           >
             <div class="w-1.5 h-3 rounded-full bg-white animate-bounce"></div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <!-- Part 1C (About + Mission + Vision) Starts Here -->
     <!-- ================= ABOUT ================= -->
 
     <section id="about" class="py-28 bg-white dark:bg-slate-950">
@@ -696,7 +700,7 @@
           <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
             Our commitment to professionalism, integrity and technical
             excellence allows us to deliver reliable solutions that create
-            measurable impact.
+            measurable inpact.
           </p>
         </div>
 
@@ -1005,6 +1009,134 @@
       </div>
     </section>
 
+    <!-- ================= CREDENTIALS & PARTNERSHIP ================= -->
+
+    <section id="credentials" class="py-28 bg-slate-50 dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Heading -->
+
+        <div class="max-w-3xl mx-auto text-center">
+          <span
+            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
+          >
+            Trust & Credibility
+          </span>
+
+          <h2 class="mt-6 text-4xl md:text-5xl font-bold">
+            Professional Credentials & Strategic Partnership
+          </h2>
+
+          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
+            AMO ELITE is committed to delivering professional services with
+            integrity, transparency, and compliance. Our legal credentials and
+            strategic partnerships reflect our dedication to maintaining the
+            highest professional standards.
+          </p>
+        </div>
+
+        <!-- License & Certificate -->
+
+        <div class="grid lg:grid-cols-2 gap-8 mt-20">
+          <!-- Business License -->
+
+          <div
+            class="bg-white dark:bg-slate-950 rounded-[30px] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition duration-300"
+          >
+            <img
+              src="images/cpa.jpg"
+              alt="Business License"
+              class="w-full h-80 object-cover"
+            />
+
+            <div class="p-8">
+              <h3 class="text-2xl font-bold">Business License</h3>
+
+              <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+                Official business license authorizing AMO ELITE to provide
+                professional audit, tax, financial advisory and consulting
+                services in accordance with applicable regulations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Registration Certificate -->
+
+          <div
+            class="bg-white dark:bg-slate-950 rounded-[30px] overflow-hidden border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition duration-300"
+          >
+            <img
+              src="images/membership.jpg"
+              alt="Company Registration Certificate"
+              class="w-full h-80"
+            />
+
+            <div class="p-8">
+              <h3 class="text-2xl font-bold">
+                Company Registration Certificate
+              </h3>
+
+              <p class="mt-4 text-slate-600 dark:text-slate-400 leading-7">
+                Official registration confirming AMO ELITE as a legally
+                established professional services firm committed to excellence,
+                accountability, and ethical business practices.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnership -->
+
+        <div
+          class="mt-20 rounded-32px bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-10 lg:p-14 shadow-lg"
+        >
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left -->
+
+            <div>
+              <span
+                class="uppercase tracking-[4px] text-sm font-semibold text-blue-700"
+              >
+                Strategic Partnership
+              </span>
+
+              <h3 class="mt-5 text-3xl font-bold">Collaboration with inpact</h3>
+
+              <p class="mt-6 text-slate-600 dark:text-slate-400 leading-8">
+                AMO ELITE maintains a strategic partnership with inpact to
+                strengthen professional capabilities and deliver high-quality
+                audit, tax, advisory and financial consulting services. This
+                collaboration enables us to provide clients with greater
+                expertise, broader industry knowledge, and sustainable business
+                solutions.
+              </p>
+            </div>
+
+            <!-- Right -->
+
+            <div class="flex justify-center">
+              <div
+                class="w-full max-w-sm rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-10 flex items-center justify-center"
+              >
+                <!-- Light Mode Logo -->
+                <img
+                  src="images/inpact.png"
+                  alt="INPACT Global Logo"
+                  class="h-46 object-contain dark:hidden"
+                />
+
+                <!-- Dark Mode Logo -->
+                <img
+                  src="images/inpact-dark.png"
+                  alt="INPACT Global Logo"
+                  class="hidden h-46 object-contain dark:block"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= STATISTICS ================= -->
 
     <section class="py-20 bg-slate-900 dark:bg-black text-white">
@@ -1036,206 +1168,7 @@
         </div>
       </div>
     </section>
-    <!-- ================= LEADERSHIP TEAM ================= -->
 
-    <section id="leadership" class="py-28 bg-white dark:bg-slate-950">
-      <div class="max-w-7xl mx-auto px-6">
-        <!-- HEADER -->
-
-        <div class="max-w-3xl mx-auto text-center">
-          <span
-            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
-          >
-            Leadership
-          </span>
-
-          <h2
-            class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
-          >
-            Experienced Professionals Leading With Integrity
-          </h2>
-
-          <p class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400">
-            Our leadership team brings together professional expertise, industry
-            experience and commitment to delivering high-quality advisory
-            services.
-          </p>
-        </div>
-
-        <!-- LEADERSHIP CARDS -->
-
-        <div class="mt-20 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- PERSON 1 -->
-
-          <div
-            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
-          >
-            <div
-              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
-            >
-              <img
-                src="images/team1.jpg"
-                alt="Ghulam Haider Rasooli"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-xl font-bold">Ghulam Haider Rasooli</h3>
-
-              <p class="mt-2 text-blue-700 font-medium">Managing Partner</p>
-
-              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
-                Providing strategic leadership and professional direction with
-                extensive experience in audit and advisory services.
-              </p>
-            </div>
-          </div>
-
-          <!-- PERSON 2 -->
-
-          <div
-            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
-          >
-            <div
-              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
-            >
-              <img
-                src="images/team2.jpg"
-                alt="Sherafgan Ali Zeb"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-xl font-bold">Sherafgan Ali Zeb</h3>
-
-              <p class="mt-2 text-blue-700 font-medium">Partner</p>
-
-              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
-                Supporting clients through financial advisory, assurance and
-                business consulting solutions.
-              </p>
-            </div>
-          </div>
-
-          <!-- PERSON 3 -->
-
-          <div
-            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
-          >
-            <div
-              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
-            >
-              <img
-                src="images/team3.jpg"
-                alt="Muhammad Luqman"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-xl font-bold">Muhammad Luqman</h3>
-
-              <p class="mt-2 text-blue-700 font-medium">Senior Advisor</p>
-
-              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
-                Delivering technical expertise and supporting complex
-                professional engagements.
-              </p>
-            </div>
-          </div>
-
-          <!-- PERSON 4 -->
-
-          <div
-            class="group rounded-3xl overflow-hidden bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-3 transition-all duration-500"
-          >
-            <div
-              class="h-72 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
-            >
-              <img
-                src="images/team4.jpg"
-                alt="Moreed Ahmad Hamyar"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
-            </div>
-
-            <div class="p-8">
-              <h3 class="text-xl font-bold">Moreed Ahmad Hamyar</h3>
-
-              <p class="mt-2 text-blue-700 font-medium">Advisory Consultant</p>
-
-              <p class="mt-5 text-slate-600 dark:text-slate-400 leading-7">
-                Focused on delivering effective solutions and supporting
-                organizational growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= CLIENTS ================= -->
-
-    <section class="py-24 bg-slate-50 dark:bg-slate-900">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto">
-          <span
-            class="uppercase tracking-[5px] text-sm font-semibold text-blue-700"
-          >
-            Our Clients
-          </span>
-
-          <h2 class="mt-6 text-4xl md:text-5xl font-bold">
-            Organizations That Trust Us
-          </h2>
-
-          <p class="mt-6 text-lg text-slate-600 dark:text-slate-400">
-            We have supported organizations across development, public and
-            private sectors with professional financial services.
-          </p>
-        </div>
-
-        <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            HHOA
-          </div>
-
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            PACO
-          </div>
-
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            AADA
-          </div>
-
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            APSSO
-          </div>
-
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            AUWSSC
-          </div>
-
-          <div
-            class="h-28 rounded-2xl bg-white dark:bg-slate-950 flex items-center justify-center font-bold text-xl border border-slate-200 dark:border-slate-800"
-          >
-            BDN
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- ================= CONTACT ================= -->
 
     <section id="contact" class="py-28 bg-white dark:bg-slate-950">
@@ -1250,81 +1183,197 @@
               Contact Us
             </span>
 
-            <h2 class="mt-6 text-4xl md:text-5xl font-bold">
-              Let's Build A Better Future Together
+            <h2
+              class="mt-6 text-4xl md:text-5xl font-bold text-slate-900 dark:text-white"
+            >
+              Let's Build a Better Future Together
             </h2>
 
             <p
               class="mt-8 text-lg leading-8 text-slate-600 dark:text-slate-400"
             >
-              Whether you need Audit, Tax Advisory or Business Consulting
-              support, our professional team is ready to help your organization
-              achieve its goals.
+              Whether you require Audit, Tax Advisory or Business Consulting
+              services, our experienced professionals are ready to provide
+              trusted solutions tailored to your organization's needs.
             </p>
 
-            <div class="mt-10 space-y-6">
-              <div>
-                <h4 class="font-bold text-lg">Office</h4>
+            <div class="mt-10 flex flex-wrap gap-5">
+              <a
+                href="mailto:info@amoelite.com"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-semibold transition"
+              >
+                Email Us
+              </a>
 
-                <p class="mt-2 text-slate-600 dark:text-slate-400">
-                  Kabul, Afghanistan
-                </p>
-              </div>
-
-              <div>
-                <h4 class="font-bold text-lg">Email</h4>
-
-                <p class="mt-2 text-slate-600 dark:text-slate-400">
-                  info@amoelite.com
-                </p>
-              </div>
-
-              <div>
-                <h4 class="font-bold text-lg">Phone</h4>
-
-                <p class="mt-2 text-slate-600 dark:text-slate-400">
-                  +93 XXX XXX XXX
-                </p>
-              </div>
+              <a
+                href="tel:+93786913777"
+                class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition font-semibold"
+              >
+                Call Us
+              </a>
             </div>
           </div>
 
-          <!-- FORM -->
+          <!-- RIGHT SIDE -->
 
           <div
-            class="rounded-4xl p-10 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800"
+            class="rounded-4xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden"
           >
-            <form class="space-y-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
-              />
+            <!-- TOP BAR -->
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
-              />
+            <div class="bg-blue-700 px-8 py-6">
+              <h3 class="text-2xl font-bold text-white">Contact Information</h3>
 
-              <input
-                type="text"
-                placeholder="Subject"
-                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
-              />
+              <p class="mt-2 text-blue-100">
+                We're always ready to assist you with professional advisory
+                services.
+              </p>
+            </div>
 
-              <textarea
-                rows="5"
-                placeholder="Your Message"
-                class="w-full px-6 py-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-700 outline-none focus:ring-2 focus:ring-blue-700"
-              ></textarea>
+            <div class="p-8 space-y-8">
+              <!-- OFFICE -->
 
-              <button
-                class="w-full py-4 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 transition"
-              >
-                Send Message
-              </button>
-            </form>
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-700 flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-lg">Office Address</h4>
+                  <p class="mt-1 text-slate-600 dark:text-slate-400">
+                    House #7, Street #4, Fakhruddin Raazi, Shahr-e-Naw Kabul,
+                    Afghanistan.
+                  </p>
+                </div>
+              </div>
+
+              <!-- EMAIL -->
+
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-700 flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5h-15A2.25 2.25 0 012.25 17.25V6.75A2.25 2.25 0 014.5 4.5h15A2.25 2.25 0 0121.75 6.75z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3 7.5l9 6 9-6"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-lg">Email</h4>
+                  <a
+                    href="mailto:info@amoelite.com"
+                    class="mt-1 text-blue-700 hover:underline"
+                  >
+                    info@amoelite.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- PHONE -->
+
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-700 flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372a1.5 1.5 0 00-1.09-1.44l-4.423-1.106a1.5 1.5 0 00-1.54.57l-.97 1.293a12.035 12.035 0 01-5.73-5.73l1.293-.97a1.5 1.5 0 00.57-1.54L7.562 3.84A1.5 1.5 0 006.122 2.75H4.75A2.25 2.25 0 002.5 5v1.75z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-lg">Phone</h4>
+                  <a
+                    href="tel:+93786913777"
+                    class="mt-1 text-slate-600 dark:text-slate-400 hover:text-blue-700"
+                  >
+                    +93 786 913 777
+                  </a>
+                </div>
+              </div>
+
+              <!-- HOURS -->
+
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-700 flex items-center justify-center shrink-0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.8"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-white"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6l4 2"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-lg">Office Hours</h4>
+                  <p class="mt-1 text-slate-600 dark:text-slate-400">
+                    Saturday – Thursday<br />
+                    8:00 AM – 5:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1352,12 +1401,6 @@
             <br />
 
             <a href="#services"> Services </a>
-
-            <br />
-
-            <a href="#leadership"> Leadership </a>
-
-            <br />
 
             <a href="#contact"> Contact </a>
           </div>
@@ -1411,112 +1454,7 @@
 
     <!-- ================= JAVASCRIPT ================= -->
 
-    <script>
-      // DARK MODE
-
-      const themeBtn = document.getElementById("themeBtn");
-
-      themeBtn.onclick = () => {
-        document.documentElement.classList.toggle("dark");
-      };
-
-      // MOBILE MENU
-
-      const menuBtn = document.getElementById("menuBtn");
-
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      menuBtn.onclick = () => {
-        mobileMenu.classList.toggle("translate-x-full");
-      };
-
-      // NAVBAR SCROLL EFFECT
-
-      const navbar = document.getElementById("navbar");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
-          navbar.classList.add("backdrop-blur-xl");
-        } else {
-          navbar.classList.remove("backdrop-blur-xl");
-        }
-      });
-
-      // HERO SLIDESHOW
-
-      const images = [
-        "images/hero.jpg",
-
-        "images/hero2.jpg",
-
-        "images/hero3.jpg",
-      ];
-
-      let index = 0;
-
-      const bg1 = document.getElementById("heroBg1");
-
-      const bg2 = document.getElementById("heroBg2");
-
-      setInterval(() => {
-        index = (index + 1) % images.length;
-
-        bg2.style.backgroundImage = `url('${images[index]}')`;
-
-        bg2.classList.remove("opacity-0");
-
-        bg1.classList.add("opacity-0");
-
-        setTimeout(() => {
-          bg1.style.backgroundImage = `url('${images[index]}')`;
-
-          bg1.classList.remove("opacity-0");
-
-          bg2.classList.add("opacity-0");
-        }, 2000);
-      }, 6000);
-
-
-
-window.addEventListener(
-"load",
-()=>{
-
-
-const loader =
-document.getElementById("preloader");
-
-
-
-setTimeout(()=>{
-
-
-loader.classList.add(
-"opacity-0"
-);
-
-
-
-setTimeout(()=>{
-
-
-loader.style.display="none";
-
-
-},1000);
-
-
-
-},500);
-
-
-
-}
-
-);
-
-
-    </script>
+    <script src="js/script.js"></script>
   </body>
   <!-- ================= PRELOADER ================= -->
 

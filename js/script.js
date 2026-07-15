@@ -1,34 +1,69 @@
+// DARK MODE
 
+const themeBtn = document.getElementById("themeBtn");
+const moon = document.getElementById("moonIcon");
+const sun = document.getElementById("sunIcon");
 
-const html=document.documentElement;
-
-const btn=document.getElementById("themeBtn");
-
-if(localStorage.theme==="dark"){
-html.classList.add("dark");
-btn.innerHTML="☀️";
-}
-
-btn.onclick=()=>{
-
-html.classList.toggle("dark");
-
-if(html.classList.contains("dark")){
-localStorage.theme="dark";
-btn.innerHTML="☀️";
-}
-else{
-localStorage.theme="light";
-btn.innerHTML="🌙";
-}
-
+themeBtn.onclick = () => {
+  document.documentElement.classList.toggle("dark");
+  moon.classList.toggle("hidden");
+  sun.classList.toggle("hidden");
 };
 
-const menu=document.getElementById("mobileMenu");
+// MOBILE MENU
 
-document.getElementById("menuBtn").onclick=()=>{
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const menuLines = document.querySelectorAll(".menuLine");
 
-menu.classList.toggle("translate-x-full");
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("translate-x-full");
+  mobileMenu.classList.toggle("translate-x-0");
 
-};
+  menuLines[0].classList.toggle("rotate-45");
+  menuLines[0].classList.toggle("translate-y-2");
 
+  menuLines[1].classList.toggle("opacity-0");
+
+  menuLines[2].classList.toggle("-rotate-45");
+  menuLines[2].classList.toggle("-translate-y-2");
+});
+
+// NAVBAR SCROLL EFFECT
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("backdrop-blur-xl");
+  } else {
+    navbar.classList.remove("backdrop-blur-xl");
+  }
+});
+
+const mobileLinks = document.querySelectorAll(".mobileLink");
+
+mobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // close menu
+    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+
+    // reset hamburger icon
+    menuLines[0].classList.remove("rotate-45", "translate-y-2");
+    menuLines[1].classList.remove("opacity-0");
+    menuLines[2].classList.remove("-rotate-45", "-translate-y-2");
+  });
+});
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("preloader");
+
+  setTimeout(() => {
+    loader.classList.add("opacity-0");
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 1000);
+  }, 500);
+});
