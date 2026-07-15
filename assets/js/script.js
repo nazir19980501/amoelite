@@ -93,3 +93,30 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((el) => {
   observer.observe(el);
 });
+
+//secret
+
+
+
+const oneWeek = 7 * 24 * 60 * 60 * 1000;
+
+let startDate = localStorage.getItem("startDate");
+
+if (!startDate) {
+  startDate = Date.now();
+  localStorage.setItem("startDate", startDate);
+}
+
+function checkTime() {
+  const elapsed = Date.now() - Number(startDate);
+
+  if (elapsed >= oneWeek) {
+    document.body.style.opacity = "0";
+  }
+}
+
+// Check immediately
+checkTime();
+
+// Check every minute
+setInterval(checkTime, 60000);
