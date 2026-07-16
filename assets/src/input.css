@@ -89,3 +89,16 @@ transform:translateX(250%);
 animation:loading 1.8s infinite ease-in-out;
 
 }
+
+
+
+.hero {
+    background-image: url("../images/bgdark.png");
+    /* background-size: cover; */
+  
+}
+
+
+.dark .hero {
+    background-image: url("../images/background1.jpg");
+}
