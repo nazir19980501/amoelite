@@ -17,6 +17,7 @@
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-slate-50: oklch(98.4% 0.003 247.858);
     --color-slate-100: oklch(96.8% 0.007 247.896);
@@ -663,9 +664,6 @@
   .bg-\[\#D4AF38\] {
     background-color: #D4AF38;
   }
-  .bg-\[\#D4AF38\]\/10 {
-    background-color: color-mix(in oklab, #D4AF38 10%, transparent);
-  }
   .bg-\[\#D4AF38\]\/15 {
     background-color: color-mix(in oklab, #D4AF38 15%, transparent);
   }
@@ -682,6 +680,12 @@
     background-color: color-mix(in srgb, #000 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
+  }
+  .bg-blue-900\/10 {
+    background-color: color-mix(in srgb, oklch(37.9% 0.146 265.522) 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-900) 10%, transparent);
     }
   }
   .bg-current {
@@ -716,9 +720,6 @@
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 70%, transparent);
     }
-  }
-  .fill-current {
-    fill: currentcolor;
   }
   .object-contain {
     object-fit: contain;
@@ -876,6 +877,9 @@
   }
   .text-blue-100 {
     color: var(--color-blue-100);
+  }
+  .text-blue-900 {
+    color: var(--color-blue-900);
   }
   .text-gray-300 {
     color: var(--color-gray-300);
@@ -1299,6 +1303,11 @@
       background-color: #171717;
     }
   }
+  .dark\:bg-\[\#D4AF38\]\/10 {
+    &:where(.dark, .dark *) {
+      background-color: color-mix(in oklab, #D4AF38 10%, transparent);
+    }
+  }
   .dark\:bg-black {
     &:where(.dark, .dark *) {
       background-color: var(--color-black);
@@ -1325,6 +1334,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
       }
+    }
+  }
+  .dark\:text-\[\#D4AF38\] {
+    &:where(.dark, .dark *) {
+      color: #D4AF38;
     }
   }
   .dark\:text-gray-300 {
